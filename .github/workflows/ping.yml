@@ -1,0 +1,10 @@
+name: Inventory check
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '*/5 * * * *'
+jobs:
+  ping:
+    name: ping
+    steps:
+      run: node ping.js
