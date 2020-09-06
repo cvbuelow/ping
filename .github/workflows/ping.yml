@@ -6,5 +6,6 @@ on:
 jobs:
   ping:
     name: ping
+    runs-on: ubuntu-latest
     steps:
       - run: node ping.js
