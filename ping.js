@@ -6,6 +6,6 @@ axios.get('https://api.prod.wearf1gs.com/shop/graphql?query=query%20getProductGr
     if (!sku.soldOut) {
       console.log('in stock! 😃');
     } else {
-      throw new Error('out of stock 😞');
+      console.log('out of stock 😞');
     }
   });
