@@ -4,7 +4,7 @@
   "description": "check for updates",
   "main": "ping.js",
   "scripts": {
-    "start": "node ping.js"
+    "start": "node --unhandled-rejections=strict ping.js"
   },
   "repository": {
     "type": "git",
