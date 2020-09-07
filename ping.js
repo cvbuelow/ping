@@ -4,11 +4,8 @@ axios.get('https://api.prod.wearf1gs.com/shop/graphql?query=query%20getProductGr
   .then(response => {
     const sku = response.data.data.productGroups.nodes[0].variants.find(item => item.sku === 'CM996FGARED:7.5');
     if (!sku.soldOut) {
-      console.log("in stock! 😃");
+      console.log('in stock! 😃');
     } else {
-      console.log("out of stock 😞");
+      throw new Error('out of stock 😞');
     }
-  })
-  .catch(error => {
-    console.log(error);
   });
